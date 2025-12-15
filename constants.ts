@@ -1,7 +1,7 @@
-// In a real production build, these would be environment variables.
-// For this setup, we assume the backend runs on port 5000 locally.
-export const API_BASE_URL = 'http://localhost:5000/api';
-export const FILE_BASE_URL = 'http://localhost:5000';
+const BASE_URL = import.meta.env.VITE_API_URL;
+
+export const API_BASE_URL = `${BASE_URL}/api`;
+export const FILE_BASE_URL = BASE_URL;
 
 export const STATUS_COLORS = {
   Pending: 'bg-yellow-100 text-yellow-800 border-yellow-200',
