@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",                            // Modern JS version for compatibility
+    "experimentalDecorators": true,                 // For decorators used in classes
+    "useDefineForClassFields": false,               // Ensures compatibility with TypeScript class fields
+    "module": "ESNext",                             // Use ES modules (modern approach)
+    "lib": [
+      "ES2022",                                     // Ensure compatibility with modern JS libraries
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,                           // Skip library checking for faster builds
+    "types": [
+      "node"                                        // Enable Node.js types
+    ],
+    "moduleResolution": "bundler",                  // Bundler module resolution
+    "isolatedModules": true,                        // For type safety in files
+    "moduleDetection": "force",                     // Forces TypeScript to detect all modules
+    "allowJs": true,                                // Allow JavaScript files in the project
+    "jsx": "react-jsx",                             // Use the modern JSX Transform for React
+    "paths": {
+      "@/*": [
+        "./*"                                       // Alias for cleaner imports, e.g. import { Component } from '@/components'
+      ]
+    },
+    "allowImportingTsExtensions": true,             // Allow .ts/.tsx extensions in imports
+    "noEmit": false,                                // Ensure TypeScript compiles the files for bundling
+    "esModuleInterop": true,                        // Ensure compatibility with CommonJS modules
+    "skipDefaultLibCheck": true                     // Skip checking of default libraries for faster compilation
+  },
+  "include": [
+    "src/**/*",                                     // Include all the necessary source files
+    "components/**/*",
+    "backend/**/*"
+  ]
+}
